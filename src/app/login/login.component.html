@@ -1,1 +1,15 @@
 <p>login works!</p>
+<form class="row g-3">
+    <div class="col-auto">
+        <label for="staticUser" class="visually-hidden">Username</label>
+        <input type="text" class="form-control-plaintext" value="" name= "username" [(ngModel)] = "username">
+    </div>
+    <div class="col-auto">
+      <label for="inputPassword" class="visually-hidden">Password </label>
+      <input type="password" class="form-control" name="password" [(ngModel)] ="password" >
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-3" (click)="User()">Submit</button>
+    </div>
+  </form>
+
