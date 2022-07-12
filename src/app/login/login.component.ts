@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ export class LoginComponent implements OnInit {
   username:string;
   password:string;
 
-  constructor() {
+  constructor(private router : Router) {
     this.username =("");
     this.password =("");
    }
@@ -21,10 +22,13 @@ export class LoginComponent implements OnInit {
   User(){
     if(this.username == "xyz" && this.password =="1234")
     {
-      console.log("welcome")
+      console.log("welcome");
+      // alert("welcome to my page");
+      this.router.navigate(['/home']);
     }
     else{
-      console.log("Plese check your username or password")
+      console.log("Plese check your username or password");
+      alert("Plese check your username or password")
     }
   }
 
